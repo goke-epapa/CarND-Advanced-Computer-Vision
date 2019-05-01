@@ -22,3 +22,5 @@ histogram = hist(img)
 
 # Visualize the resulting histogram
 plt.plot(histogram)
+
+plt.show()
