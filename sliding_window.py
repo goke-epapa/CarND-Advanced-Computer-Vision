@@ -97,8 +97,8 @@ def fit_polynomial(binary_warped):
     leftx, lefty, rightx, righty, out_img = find_lane_pixels(binary_warped)
 
     ### TO-DO: Fit a second order polynomial to each using `np.polyfit` ###
-    left_fit = np.polyfit(leftx, lefty, 2)
-    right_fit = np.polyfit(rightx, righty, 2)
+    left_fit = np.polyfit(lefty, leftx, 2)
+    right_fit = np.polyfit(righty, rightx, 2)
 
     # Generate x and y values for plotting
     ploty = np.linspace(0, binary_warped.shape[0]-1, binary_warped.shape[0] )
